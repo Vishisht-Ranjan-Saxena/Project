@@ -12,7 +12,7 @@ router.post('/add', (req, res) => {
     new Model(req.body).save()
     .then((data) => {
         console.log(data);
-        res.json(data); //default status code is 200
+        res.json(data); //default status code is 200 (OK)
     })
     .catch((err) => {
         console.error(err);
