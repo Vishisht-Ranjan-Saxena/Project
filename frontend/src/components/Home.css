@@ -1,0 +1,14 @@
+.hero-bg{
+    background-image: url('https://images.unsplash.com/photo-1521651201144-634f700b36ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=Mnw5NjI0M3wwfDF8c2VhcmNofDJ8fHNhZmFyaXxlbnwwfHx8fDE2NDU2MDY0NTc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080');
+                  height: 500px;
+                  background-size: cover;
+                  background-position: 50% 50%;
+}
+
+.random1{
+    height: 30px;
+                  margin-top: -30px;
+                  transform: scale(2);
+                  transform-origin: top center;
+                  color: #fff;
+}
