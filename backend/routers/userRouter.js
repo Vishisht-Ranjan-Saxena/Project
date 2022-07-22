@@ -5,6 +5,9 @@ const router = express.Router();
 // importing user model
 const Model = require('../models/userModel');
 
+// router.use( cors({ origin : ['http://localhost:3000/login'] }) );
+
+
 router.post('/add', (req, res) => {
     console.log(req.body);
     
@@ -75,5 +78,30 @@ router.put('/update/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+router.post('authenticate', (req, res) => {
+    const formdata = req.body;
+    console.log(formdata);
+    Model.findOne({email : formdata.email, password : formdata.password})
+        .then((result) => {
+            console.log(result);
+
+            //if condition is true, i.e., user is found
+            if(result){
+                console.log("Login Successful..!");
+                res.json(result);
+            }
+            else{
+                console.log("Login Failed.");
+                res.status(400).json({status : 'Login Failled.'});
+            }
+
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).json(err);
+        });
+
+    });
 
 module.exports = router;

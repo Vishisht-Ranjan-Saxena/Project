@@ -7,6 +7,19 @@ const Login = () => {
 
     const userSubmit = (formdata) => {
         console.log(formdata);
+
+        //1. url
+        //2. request method
+        //3. data
+        //4. Data format
+
+        fetch('http://localhost:5000/user/authenticate', {
+            method: 'POST',
+            body : JSON.stringify(formdata),
+            headers : {
+                'Content-Type' : 'application/json'
+            }
+        })
     }
 
     return (
