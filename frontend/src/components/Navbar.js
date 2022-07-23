@@ -52,7 +52,7 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
   }));
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg" style={{background:"darkgreen"}}>
       <div class="container-fluid">
         <button
           class="navbar-toggler"

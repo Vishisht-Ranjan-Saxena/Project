@@ -1,11 +1,11 @@
-
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
+import Swal from "sweetalert2";
 
 const Login = () => {
 
-    const userSubmit = (formdata) => {
+    const userSubmit = async (formdata) => {
         console.log(formdata);
 
         //1. url
@@ -13,13 +13,35 @@ const Login = () => {
         //3. data
         //4. Data format
 
-        fetch('http://localhost:5000/user/authenticate', {
+        const res = await fetch('http://localhost:5000/user/authenticate', {
             method: 'POST',
             body : JSON.stringify(formdata),
             headers : {
                 'Content-Type' : 'application/json'
             }
         })
+
+        if(res.status === 200){
+            Swal.fire({
+                icon : 'success',
+                title : 'Login Successful',
+                text : 'You are now logged in..'
+            })
+        }
+        else if(res.status === 400){
+            Swal.fire({
+                icon : 'error',
+                title : 'Login Failed',
+                text : 'Invalid username or password..'
+            })
+        }
+        else{
+            Swal.fire({
+                icon : 'error',
+                title : 'Login Failed',
+                text : 'Something went wrong !!'
+            })
+        }
     }
 
     return (

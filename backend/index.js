@@ -10,10 +10,14 @@ const io = new Server(httpServer, { cors : { origin : ['http://localhost:3000'] 
 io.on("connection", (socket) => {
   console.log("a client connected");
 
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+
 //   receiving an event from client
     socket.on('sendmsg', ( data ) => {
         console.log(data);
-    })
+    });
 
 });
 

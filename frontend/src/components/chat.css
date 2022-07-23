@@ -1,0 +1,28 @@
+.msg-area{
+    height: 70vh;
+    overflow-y: auto;
+}
+
+.msg-bubble{
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    width: fit-content;
+    max-width: 70%;
+}
+
+.bubble-sent{
+    background: green;
+    margin-left: auto;
+    border-radius: 20px 5px 20px 20px;
+}
+
+.bubble-rec{
+    background: blue;
+    border-radius: 5px 20px 20px 20px;
+
+}
+
+.msg-content{
+    margin: 0;
+}
