@@ -14,6 +14,9 @@ const Chat = () => {
     socket.emit("sendmsg", msgText)
   }
 
+  // if (!socket.connected) {
+  //   return <div>Connecting...</div>
+  // }
   return (
     <div className="container">
       <input
