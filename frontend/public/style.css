@@ -1,4 +1,5 @@
 body {
     background-image: url('background.webp'); 
     background-size: cover;
+    /* background-weight: 60%; */
 }

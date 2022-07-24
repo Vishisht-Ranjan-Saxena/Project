@@ -63,8 +63,8 @@ const Signup = () => {
             <img className="x" src={pic} />
         </div>
         <div className="col-6 mt-5">
-        <div className="card">
-      <div className="card-body">
+        <div className="card xyz">
+      <div className="card-body xyz">
       <h1>Signup Here</h1>
       <hr />
 

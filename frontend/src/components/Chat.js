@@ -42,9 +42,9 @@ const Chat = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Chat App</h1>
-      <div className="card">
+    <div className="container mb-5">
+      <h1 className="mt-5 mb-4 text-center text-white border btn-rounded">Chat App</h1>
+      <div className="card mt-5">
         <div className="card-body">
           <div className="msg-area">{displayMessages()}</div>
         </div>

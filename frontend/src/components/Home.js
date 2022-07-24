@@ -18,13 +18,17 @@ const Home = () => {
         <br />    <br />
         <main role="main" class="inner cover">
         <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
         <p class="lead">
           <a href='./signup' class="btn btn-lg btn-secondary">Learn more</a>
         </p>
       </main>
 
-      <footer class="mastfoot mt-auto text-bottom text-center">
+      <footer class="mastfoot mt-2 mb-0 mt-auto text-bottom text-center">
         <div class="inner">
           <p>Cover template for home page.</p>
         </div>

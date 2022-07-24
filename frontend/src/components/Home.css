@@ -129,3 +129,12 @@ main, footer {
     background-color: rgba(245, 245, 245, 0.579);
     border-radius: 0.52rem;
 }
+/* 
+main, nav, footer, .container, .row {
+    width: 98vw;
+} */
+
+footer {
+    margin: 0%;
+    padding: 0%;
+}

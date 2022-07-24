@@ -8,11 +8,11 @@
 }
 
 .card {
-    background: rgba(250, 248, 246, 0.695);
+    background: rgba(250, 248, 246, 0.695) !important;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
 .card-body {
-    background: rgba(250, 248, 246, 0.239);
+    background: rgba(250, 248, 246, 0.239) !important;
 }

@@ -10,10 +10,23 @@
 
   .card-body {
     margin: 26px 66px 26px 36px;
+    /* background-color: rgba(158, 165, 201, 0.492) !important; */
+    border-radius: 20px;
   }
 
   .div, .card {
+    /* background-color: rgba(177, 171, 233, 0.571) !important; */
     display: flex;
+  }
+
+  .card.xyz {
+    margin-left: -10px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+
+  .card-body.xyz {
+    margin-left: 50px;
   }
 
   img {
@@ -34,8 +47,23 @@
   img.x {
     height: 100%;
     width: auto;
+    margin-right: -2px;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
   }
 
 nav {
   width: 100vw;
+}
+
+.xyz {
+  background-color: rgba(72, 95, 159, 0.563) !important;
+}
+
+form {
+  color: black;
+}
+
+TextField {
+  background-color: black;
 }

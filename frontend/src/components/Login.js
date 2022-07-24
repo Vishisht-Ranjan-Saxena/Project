@@ -89,13 +89,13 @@ const Login = () => {
                                             <br />  
                                             <br />
 
-                                            <a class="small text-muted align-left" href="#!">
+                                            <a class="small text-muted align-left text-secondary" href="#!">
                                                 Forgot password?
                                             </a>
 
                                             <br />    <br />
 
-                                            <p class="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                                            <p class="mb-5 pb-lg-2 text-primary" style={{ color: "#393f81" }}>
                                                 Don't have an account?{" "}
                                                 <a href="./signup" style={{ color: "#393f81" }}>
                                                 Register here
