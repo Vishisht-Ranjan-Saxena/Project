@@ -57,14 +57,14 @@ const Signup = () => {
   return (
     <div className="container mb-5">
       <div className="col-md-12 mx-auto" style={{marginLeft:"42px"}}>
-      <div className="row"  style={{height:"100%"}}>
+      <div className="row">
         <div className="col-1"></div>
-        <div className="card col-4 mt-5" style={{height:"100%"}}>
-            <img src={pic} style={{height:"710px"}} />
+        <div className="card col-4 mt-5">
+            <img className="x" src={pic} />
         </div>
-        <div className="col-6 mt-5" style={{height:"100%"}}>
-        <div className="card" style={{height:"100%"}}>
-      <div className="card-body" style={{height:"100%"}}>
+        <div className="col-6 mt-5">
+        <div className="card">
+      <div className="card-body">
       <h1>Signup Here</h1>
       <hr />
 

@@ -15,3 +15,27 @@
   .div, .card {
     display: flex;
   }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div, img {
+    margin: 0;
+  }
+
+  img.x {
+    height: 100%;
+    width: auto;
+  }
+
+nav {
+  width: 100vw;
+}
