@@ -1,6 +1,7 @@
 import { styled, Switch } from "@mui/material";
 import React from "react";
 import {NavLink} from 'react-router-dom';
+import './navbar.css';
 
 const Navbar = ({ darkTheme, setDarkTheme }) => {
 

@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
-import './undraw_Group_chat_re_frmo.png';
+import pic from '../images/undraw_group_chat_re_frmo.svg';
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -58,11 +58,11 @@ const Login = () => {
                                     {({values, handleChange, handleSubmit}) => (
                                         <form onSubmit={handleSubmit}>
                                             
-                                            <h3 className="text-center">Sign-in Here</h3>
+                                            <h3 className="text-center text-primary" style={{fontFamily:"Roboto,bold"}}>Sign-in Here</h3>
                                             <hr className='bg-primary' style={{height: "2px"}} />
 
                                             <label className='mt-4'>Email</label>
-                                            <input value={values.email} onChange={handleChange} id="email" className='form-control' />
+                                            <input value={values.email} type="email" onChange={handleChange} id="email" className='form-control' />
                                             
                                             <label className='mt-4'>Password</label>
                                             <input value={values.password} onChange={handleChange} id="password" type="password" className='form-control' />
@@ -123,9 +123,9 @@ const Login = () => {
                             <div className="card-body">
 
                             <div class="col-lg d-flex align-items-center gradient-custom-2">
-              <div class=" px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">This is more than just a chat app</h4>
-                <img src='undraw_Group_chat_re_frmo.png' />
+              <div class=" ">
+                <h4 class="mb-4">This is more than just a chat app</h4> <br />
+                <img src={pic} style={{width:"100%"}} />    <br /><br />
                 <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

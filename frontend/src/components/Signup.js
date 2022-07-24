@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import './signup.css';
+import pic from '../images/start.jpg';
 
 const Signup = () => {
   // 1. Submit function
@@ -49,13 +50,21 @@ const Signup = () => {
       .max(10, 'Too Long!')
       .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
+    mobile: Yup.number().min(1000000000,'Required 10-digit mobile no.').max(9999999999,'Required 10-digit mobile no.').required('Required'),
+    age: Yup.number().min(0).max(150).required('Required')
   });
 
   return (
-    <div className="container">
-      <div className="col-md-10 mx-auto">
-      <div className="card mt-5">
-                            <div className="card-body">
+    <div className="container mb-5">
+      <div className="col-md-12 mx-auto" style={{marginLeft:"42px"}}>
+      <div className="row"  style={{height:"100%"}}>
+        <div className="col-1"></div>
+        <div className="card col-4 mt-5" style={{height:"100%"}}>
+            <img src={pic} style={{height:"710px"}} />
+        </div>
+        <div className="col-6">
+        <div className="card mt-5">
+      <div className="card-body">
       <h1>Signup Here</h1>
       <hr />
 
@@ -84,22 +93,31 @@ const Signup = () => {
                 value={values.email} 
                 onChange={handleChange} 
                 id="email" sx={{ mt: 5 }} 
-                fullWidth 
-                label="Email" />
+                fullWidth type="email"
+                label="Email" 
+                helperText={errors.email}
+                error={errors.email ? true : false}
+              />
             <TextField 
                 value={values.mobile}
                 onChange={handleChange} 
                 id="mobile" 
                 sx={{ mt: 3 }} 
-                fullWidth 
-                label="Mobile Number" />
+                fullWidth   type="tel"
+                label="Mobile Number" 
+                helperText={errors.mobile}
+                error={errors.mobile ? true : false}
+              />
             <TextField 
                 value={values.age} 
                 onChange={handleChange} 
                 id="age" 
                 sx={{ mt: 3 }} 
                 fullWidth 
-                label="Age" />
+                label="Age" 
+                helperText={errors.age}
+                error={errors.age ? true : false}
+              />
             <TextField
                 value={values.password}
                 onChange={handleChange}
@@ -108,12 +126,16 @@ const Signup = () => {
                 fullWidth
                 label="Password"
                 type="password"
+                helperText={errors.password}
+                error={errors.password ? true : false}
             />
             <button type="submit" className="btn-lg mt-5 btn-primary" >Submit</button>
           </form>
         )}
       </Formik>
       </div></div>
+        </div>
+      </div>
       </div></div>
   )
 }
