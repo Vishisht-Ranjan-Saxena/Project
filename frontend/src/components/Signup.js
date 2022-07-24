@@ -62,7 +62,7 @@ const Signup = () => {
         <div className="card col-4 mt-5" style={{height:"100%"}}>
             <img src={pic} style={{height:"710px"}} />
         </div>
-        <div className="col-6" style={{height:"100%"}}>
+        <div className="col-6 mt-5" style={{height:"100%"}}>
         <div className="card" style={{height:"100%"}}>
       <div className="card-body" style={{height:"100%"}}>
       <h1>Signup Here</h1>

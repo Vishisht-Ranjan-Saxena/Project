@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
-import pic from '../images/undraw_group_chat_re_frmo.svg';
+import pic from '../images/pexels-photo-1078810.jpeg';
 import Swal from "sweetalert2";
 
 const Login = () => {
