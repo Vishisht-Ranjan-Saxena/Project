@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
-import pic from '../images/pexels-photo-1078810.jpeg';
+import pic from '../images/Friends group.jpg';
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -125,7 +125,7 @@ const Login = () => {
                             <div class="col-lg d-flex align-items-center gradient-custom-2">
               <div class=" ">
                 <h4 class="mb-4">This is more than just a chat app</h4> <br />
-                <img src={pic} style={{width:"100%"}} />    <br /><br />
+                <img src={pic} style={{width:"100%"}} />    <br /><br /><br />
                 <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
