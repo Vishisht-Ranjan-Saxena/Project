@@ -4,6 +4,7 @@ import React from "react";
 import Swal from "sweetalert2";
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
+import './signup.css';
 
 const Signup = () => {
   // 1. Submit function
@@ -52,6 +53,9 @@ const Signup = () => {
 
   return (
     <div className="container">
+      <div className="col-md-10 mx-auto">
+      <div className="card mt-5">
+                            <div className="card-body">
       <h1>Signup Here</h1>
       <hr />
 
@@ -105,11 +109,12 @@ const Signup = () => {
                 label="Password"
                 type="password"
             />
-            <Button type="submit" sx={{ mt: 5 }}>Submit</Button>
+            <button type="submit" className="btn-lg mt-5 btn-primary" >Submit</button>
           </form>
         )}
       </Formik>
-    </div>
+      </div></div>
+      </div></div>
   )
 }
 

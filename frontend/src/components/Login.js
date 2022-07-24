@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
+import './undraw_Group_chat_re_frmo.png';
 import Swal from "sweetalert2";
 
 const Login = () => {
@@ -46,30 +47,95 @@ const Login = () => {
 
     return (
         <div>
-            <div className="col-md-4 mx-auto bg-light">
-                <div className="card mt-5">
-                    <div className="card-body">
+            <div className="col-md-10 mx-auto">
+                <div class="row mb-5">
+                    <div className="col-1"></div> 
+                    <div className="col-5">   
+                        <div className="card mt-5">
+                            <div className="card-body">
 
-                        <Formik initialValues={{email : '', password : ''}} onSubmit={userSubmit}>
-                            {({values, handleChange, handleSubmit}) => (
-                                <form onSubmit={handleSubmit}>
-                                    
-                                    <h3 className="text-center">Sign-in Here</h3>
-                                    <hr />
+                                <Formik initialValues={{email : '', password : ''}} onSubmit={userSubmit}>
+                                    {({values, handleChange, handleSubmit}) => (
+                                        <form onSubmit={handleSubmit}>
+                                            
+                                            <h3 className="text-center">Sign-in Here</h3>
+                                            <hr className='bg-primary' style={{height: "2px"}} />
 
-                                    <label className='mt-4'>Email</label>
-                                    <input value={values.email} onChange={handleChange} id="email" className='form-control' />
-                                    
-                                    <label className='mt-4'>Password</label>
-                                    <input value={values.password} onChange={handleChange} id="password" type="password" className='form-control' />
-                                
-                                    <button className='btn btn-secondary mt-5'>Login Now</button>
+                                            <label className='mt-4'>Email</label>
+                                            <input value={values.email} onChange={handleChange} id="email" className='form-control' />
+                                            
+                                            <label className='mt-4'>Password</label>
+                                            <input value={values.password} onChange={handleChange} id="password" type="password" className='form-control' />
+                                        
+                                            <div class="form-check d-flex justify-content-start mt-4">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    value=""
+                                                    id="form1Example3"
+                                                />
+                                                <label class="form-check-label" for="form1Example3">
+                                                    {" "}
+                                                    Remember me{" "}
+                                                </label>
+                                            </div>
 
-                                </form>
-                            )}
-                        </Formik>
+                                            <button className='btn btn-primary mt-2' type="submit">Login Now</button>
+                                            
+                                            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                                            
+                                            {/* <button className='btn btn-danger mt-2' type="reset">Reset</button> */}
 
+                                            <br />  
+                                            <br />
+
+                                            <a class="small text-muted align-left" href="#!">
+                                                Forgot password?
+                                            </a>
+
+                                            <br />    <br />
+
+                                            <p class="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                                                Don't have an account?{" "}
+                                                <a href="#!" style={{ color: "#393f81" }}>
+                                                Register here
+                                                </a>
+                                            </p>
+
+                                            <a href="#!" class="small text-muted">
+                                                Terms of use.
+                                            </a>
+                                            {/* &nbsp;  &nbsp;  &nbsp; */}
+                                            <br />
+                                            <a href="#!" class="small text-muted text-left">
+                                                Privacy policy
+                                            </a>
+
+                                        </form>
+                                    )}
+                                </Formik>
+
+                            </div>
+                        </div>
                     </div>
+                    <div className="col-5">
+                    <div className="card mt-5 mb-5" style={{height: "92.4%"}}>
+                            <div className="card-body">
+
+                            <div class="col-lg d-flex align-items-center gradient-custom-2">
+              <div class=" px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">This is more than just a chat app</h4>
+                <img src='undraw_Group_chat_re_frmo.png' />
+                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-1"></div>
                 </div>
             </div>
         </div>

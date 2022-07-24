@@ -7,3 +7,7 @@
       margin-right: 0;
     }
   }
+
+  .card-body {
+    margin: 26px 66px 26px 36px;
+  }

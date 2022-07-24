@@ -52,7 +52,7 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
   }));
 
   return (
-    <nav class="navbar navbar-expand-lg" style={{background:"darkgreen"}}>
+    <nav class="navbar navbar-expand-lg bg-opacity-25">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -72,28 +72,28 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <NavLink className="nav-link text-primary" to="/home">
+              <NavLink className="nav-link" to="/home">
                 Home
               </NavLink>
             </li>
             <li class="nav-item">
-              <NavLink className="nav-link text-info" to="/chat">
+              <NavLink className="nav-link" to="/chat">
                 Chat
               </NavLink>
             </li>
             <li class="nav-item">
-              <NavLink className="nav-link text-success" to="/login">
+              <NavLink className="nav-link" to="/login">
                 Login
               </NavLink>
             </li>
             <li class="nav-item">
-              <NavLink className="nav-link text-danger" to="/signup">
+              <NavLink className="nav-link" to="/signup">
                 Signup
               </NavLink>
             </li>
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <ThemeSwitch checked={darkTheme} onChange={ (e, v) => { setDarkTheme(v) } }  />
-            </li>
+            </li> */}
           </ul>
         </div>
 
