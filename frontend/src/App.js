@@ -32,6 +32,7 @@ function App() {
   })
 
   return (
+    <div className='bgd'>
     <ThemeProvider theme={ darkTheme ? myDarkTheme : myLightTheme }>
       <BrowserRouter>
 
@@ -55,6 +56,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
+    </div>
   );
 }
 
