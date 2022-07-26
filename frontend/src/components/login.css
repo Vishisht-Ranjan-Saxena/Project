@@ -11,8 +11,36 @@
     background: rgba(250, 248, 246, 0.695) !important;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    display: flex;
 }
 
 .card-body {
     background: rgba(250, 248, 246, 0.239) !important;
+}
+
+div.lefty {
+    margin-right: -12px;
+    height: 92.4%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+div.righty {
+    margin-left: -12px;
+    /* height: 100%; */
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+}
+
+/* div.main {
+    margin-bottom: -50px;
+} */
+
+/* div.row, div.col-5 {
+    min-height: 100%;
+    /* display: flex; 
+} */
+
+.lefty, .righty {
+    margin-bottom: 10px;
 }

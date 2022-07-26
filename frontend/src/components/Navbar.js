@@ -2,6 +2,7 @@ import { styled, Switch } from "@mui/material";
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import './navbar.css';
+import pic from '../images/chat-icon-png-18.jpg';
 
 const Navbar = ({ darkTheme, setDarkTheme }) => {
 
@@ -68,8 +69,9 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <a class="navbar-brand mt-2 mt-lg-0" href="#">
-            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo" loading="lazy" />
+            <img src={pic} height="36" className='my-logo' alt="My Logo" loading="lazy" />
           </a>
+            <span>Multi-User Chat Application</span>
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">

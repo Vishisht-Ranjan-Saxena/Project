@@ -46,12 +46,12 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <div className="col-md-10 mx-auto">
-                <div class="row mb-5">
-                    <div className="col-1"></div> 
-                    <div className="col-5">   
-                        <div className="card mt-5">
+        // <div className='container main'>
+            <div className="container col-xl-10 mx-auto">
+                <div class="row">
+                    <div className="col-1 mb-5"></div> 
+                    <div className="col-lg-5 mb-5">   
+                        <div className="card mt-5 lefty">
                             <div className="card-body">
 
                                 <Formik initialValues={{email : '', password : ''}} onSubmit={userSubmit}>
@@ -118,8 +118,8 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-5">
-                    <div className="card mt-5 mb-5" style={{height: "92.4%"}}>
+                    <div className="col-lg-5 mb-5">
+                    <div className="card mt-5 mb-5 righty" style={{height: "92.4%"}}>
                             <div className="card-body">
 
                             <div class="col-lg d-flex align-items-center gradient-custom-2">
@@ -135,10 +135,10 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-1"></div>
+                    <div className="col-1 mb-5"></div>
                 </div>
             </div>
-        </div>
+        // </div>
   )
 }
 

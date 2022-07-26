@@ -55,14 +55,14 @@ const Signup = () => {
   });
 
   return (
-    <div className="container mb-5">
-      <div className="col-md-12 mx-auto" style={{marginLeft:"42px"}}>
+    <div className="container">
+      <div className="col-lg-12 mx-auto" style={{marginLeft:"42px"}}>
       <div className="row">
-        <div className="col-1"></div>
-        <div className="card col-4 mt-5">
+        <div className="col-1 b-5"></div>
+        <div className="card col-lg-4 mt-5 mb-5">
             <img className="x" src={pic} />
         </div>
-        <div className="col-6 mt-5">
+        <div className="col-lg-6 mt-5 mb-5">
         <div className="card xyz">
       <div className="card-body xyz">
       <h1>Signup Here</h1>
