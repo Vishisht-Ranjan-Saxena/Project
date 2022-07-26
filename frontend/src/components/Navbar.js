@@ -71,7 +71,7 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
           <a class="navbar-brand mt-2 mt-lg-0" href="#">
             <img src={pic} height="36" className='my-logo' alt="My Logo" loading="lazy" />
           </a>
-            <span>Multi-User Chat Application</span>
+            <span>Chat Application</span>
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
