@@ -113,7 +113,7 @@ const Signup = () => {
                 onChange={handleChange} 
                 id="age" 
                 sx={{ mt: 3 }} 
-                fullWidth 
+                fullWidth   
                 label="Age" 
                 helperText={errors.age}
                 error={errors.age ? true : false}

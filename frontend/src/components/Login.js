@@ -31,7 +31,10 @@ const Login = () => {
                 title : 'Login Successful',
                 text : 'You are now logged in..'
             })
-            navigate('/chat');
+            res.json().then(data=>{
+                sessionStorage.setItem("user",JSON.stringify(data));
+                navigate('/login');
+             });
         }
         else if(res.status === 400){
             Swal.fire({
