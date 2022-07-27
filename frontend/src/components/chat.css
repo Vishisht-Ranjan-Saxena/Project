@@ -3,6 +3,10 @@
     overflow-y: auto;
 }
 
+* {
+    color: white;
+}
+
 .msg-bubble{
     color: white;
     padding: 15px;
