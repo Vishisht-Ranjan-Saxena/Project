@@ -38,7 +38,7 @@ const Chat = () => {
         <p>{sendername}</p>
       </div>
     ));
-  };
+  };  // end of displayMessages
 
   return (
     <div className="container">
