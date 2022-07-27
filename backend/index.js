@@ -17,8 +17,9 @@ io.on("connection", (socket) => {
 //   receiving an event from client
     socket.on('sendmsg', ( data ) => {
         console.log(data);
+        data.sent = false;
+        socket.broadcast.emit('recmsg', data);
     });
-
 });
 
 const port = 5000;
@@ -26,8 +27,6 @@ const port = 5000;
 const userRouter = require('./routers/userRouter');
 // const productRouter = require('./routers/productRouter');
 const cors = require('cors');
-const { log } = require('console');
-
 // middleware
 
 // to parse json data into javascript object
