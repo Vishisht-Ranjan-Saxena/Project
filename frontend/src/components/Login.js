@@ -1,10 +1,13 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
+import { Navigate, useNavigate } from 'react-router-dom';
 import pic from '../images/Friends group.jpg';
 import Swal from "sweetalert2";
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const userSubmit = async (formdata) => {
         console.log(formdata);
@@ -28,6 +31,7 @@ const Login = () => {
                 title : 'Login Successful',
                 text : 'You are now logged in..'
             })
+            navigate('/chat');
         }
         else if(res.status === 400){
             Swal.fire({

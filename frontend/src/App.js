@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { useState } from 'react';
 import Signup from './components/Signup';
 import Chat from './components/Chat';
+import Authorisor from './components/Auth';
 
 function App() {
 
@@ -44,8 +45,13 @@ function App() {
         <Routes>
           <Route element={ <Home></Home> } path="home" />
           <Route element={ <Login></Login> } path="login" />
+          <Route element={
+        <Authorisor>
+          <Chat />
+        </Authorisor>
+       }path="/chat"/>
           <Route element={ <Signup /> } path="signup" />
-          <Route element={ <Chat /> } path="chat" />
+          {/* <Route element={ <Chat /> } path="chat" /> */}
           
           <Route element={<Navigate to="/login" />}  path="/" />
 
