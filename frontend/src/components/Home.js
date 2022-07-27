@@ -6,6 +6,7 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './home.css';
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
         <p class="lead">
-          <a href='./signup' class="btn btn-lg btn-secondary">Learn more</a>
+          <Link to='/signup' class="btn btn-lg btn-secondary">Learn more</Link>
         </p>
       </main>
 

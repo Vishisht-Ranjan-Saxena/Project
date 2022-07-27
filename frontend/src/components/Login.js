@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import pic from '../images/Friends group.jpg';
 import Swal from "sweetalert2";
 
@@ -101,9 +101,9 @@ const Login = () => {
 
                                             <p class="mb-5 pb-lg-2 text-primary" style={{ color: "#393f81" }}>
                                                 Don't have an account?{" "}
-                                                <a href="./signup" style={{ color: "#393f81" }}>
+                                                <Link to="/signup" style={{ color: "#393f81" }}>
                                                 Register here
-                                                </a>
+                                                </Link>
                                             </p>
 
                                             <a href="#!" class="small text-muted">
