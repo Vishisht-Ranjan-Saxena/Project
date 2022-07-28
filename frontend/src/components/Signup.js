@@ -116,7 +116,7 @@ const Signup = () => {
                 id="dob" 
                 sx={{ mt: 3 }} 
                 fullWidth   type={"datetime-local"}
-                label="dob" 
+                label="Birth Date & Time" 
                 helperText={errors.dob}
                 error={errors.dob ? true : false}
               />
