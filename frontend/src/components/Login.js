@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
 import './login.css';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
 import pic from '../images/Friends group.jpg';
 import Swal from "sweetalert2";
 
@@ -96,9 +96,9 @@ const Login = () => {
                                             <br />  
                                             <br />
 
-                                            <a class="login login small text-muted align-left text-secondary" href="#!">
-                                                Forgot password?
-                                            </a>
+                                            <Link class="login login small text-muted align-left text-secondary" to='/forgotpassword'>
+                                                Forget Your Password?
+                                             </Link>
 
                                             <br />    <br />
 

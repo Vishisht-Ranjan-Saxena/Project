@@ -57,7 +57,12 @@ nav.signup {
 }
 
 .xyz.signup {
-  background-color: rgba(72, 95, 159, 0.563) !important;
+  background-color: white;
+  color: blue !important;
+}
+
+h1.signup {
+  color: navy;
 }
 
 form.signup {

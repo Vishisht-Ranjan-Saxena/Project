@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Signup from './components/Signup';
 import Chat from './components/Chat';
 import Authorisor from './components/Auth';
+import Forgotpassword from './components/Forgotpassword';
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
 
           <Route element={ <Notfound /> } path="*" />
 
-
+          <Route element={<Forgotpassword></Forgotpassword>}path="/forgotpassword"/>
 
         </Routes>
       </BrowserRouter>

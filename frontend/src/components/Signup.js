@@ -65,7 +65,7 @@ const Signup = () => {
         <div className="signup col-lg-6 mt-5 mb-5">
         <div className="signup card xyz">
       <div className="signup card-body xyz">
-      <h1>Signup Here</h1>
+      <h1 className="signup">Signup Here</h1>
       <hr />
 
       <Formik
