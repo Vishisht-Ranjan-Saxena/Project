@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import './signup.css';
 import pic from '../images/start.jpg';
+import { date } from "yup/lib/locale";
 
 const Signup = () => {
   // 1. Submit function
@@ -51,7 +52,7 @@ const Signup = () => {
       .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
     mobile: Yup.number().min(1000000000,'Required 10-digit mobile no.').max(9999999999,'Required 10-digit mobile no.').required('Required'),
-    age: Yup.number().min(0).max(150).required('Required')
+    dob: Yup.date().required('Required')
   });
 
   return (
@@ -72,6 +73,7 @@ const Signup = () => {
         initialValues={{
           name: "",
           age: "",
+          dob: "",
           password: "",
           mobile: "",
           email: "",
@@ -109,14 +111,14 @@ const Signup = () => {
                 error={errors.mobile ? true : false}
               />
             <TextField 
-                value={values.age} 
+                value={values.dob} 
                 onChange={handleChange} 
-                id="age" 
+                id="dob" 
                 sx={{ mt: 3 }} 
-                fullWidth   
-                label="Age" 
-                helperText={errors.age}
-                error={errors.age ? true : false}
+                fullWidth   type={"datetime-local"}
+                label="dob" 
+                helperText={errors.dob}
+                error={errors.dob ? true : false}
               />
             <TextField
                 value={values.password}

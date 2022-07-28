@@ -1,5 +1,6 @@
 // for performing user database operations
 const express = require('express');
+const { db } = require('../models/userModel');
 const router = express.Router();
 
 // importing user model
@@ -10,12 +11,29 @@ const Model = require('../models/userModel');
 
 router.post('/add', (req, res) => {
     console.log(req.body);
+    // client.db(Model).collection.aggregate([
+    //     { $addFields: { age: { $floor: { $divide: [{ $subtract: [new Date(), "$dob"] }, 31536000000] } } } },
+    // ]);
     
+    // db.user.aggregate([
+    //     { $addFields: { age: { $floor: { $divide: [{ $subtract: [new Date(), "$dob"] }, 31536000000] } } } }
+    // ])
     // async function
     new Model(req.body).save()
     .then((data) => {
         console.log(data);
         res.json(data); //default status code is 200 (OK)
+
+        // Model.collection.aggregate([
+        //     { $addFields: { age: { $floor: { $divide: [{ $subtract: [new Date(), "$dob"] }, 31536000000] } } } }
+        // ])
+        //     .then((data) => {
+        //         console.log(data);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
+            
     })
     .catch((err) => {
         console.error(err);
