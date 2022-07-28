@@ -25,6 +25,7 @@ io.on("connection", (socket) => {
 const port = 5000;
 
 const userRouter = require('./routers/userRouter');
+const chatRouter = require('./routers/chatRouter');
 // const productRouter = require('./routers/productRouter');
 const cors = require('cors');
 // middleware
@@ -37,6 +38,7 @@ app.use( cors({ origin : ['http://localhost:3000'] }) );
 
 // app.use('/product', productRouter);
 app.use('/user', userRouter);
+app.use('/chat', chatRouter);
 
 app.get('/add', (req, res) => {
     res.send('Response from Express!');

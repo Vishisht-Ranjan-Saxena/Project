@@ -6,4 +6,4 @@ const schemaObject =  new Schema({
     userId: Types.ObjectId
 })
 
-module.exports = model('chats', schemaObject);
+module.exports = model('chat', schemaObject);
