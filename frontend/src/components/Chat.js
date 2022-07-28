@@ -8,6 +8,8 @@ const Chat = () => {
 
   const [msgText, setMsgText] = useState("");
 
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem("user")))
+
   const [messageList, setMessageList] = useState([
       ]);
 
@@ -17,7 +19,7 @@ const Chat = () => {
 
   const sendMessage = () => {
 
-    const message = { text: msgText, sent: true, sendername:"Vishisht" };
+    const message = { text: msgText, sent: true, sendername:currentUser.name, sendermail:currentUser.email };
     // emit function is used to send message
     socket.emit("sendmsg", message);
 
@@ -32,31 +34,34 @@ const Chat = () => {
   });
 
   const displayMessages = () => {
-    return messageList.map(({ text, sent, sendername }) => (
+    return messageList.map(({ text, sent, sendername, sendermail }) => (
       <div className={sent ? 'bubble-sent msg-bubble' : 'bubble-rec msg-bubble'}>
-        <p className="msg-content">{text}</p>
-        <p>{sendername}</p>
+        <p class="text-white-50">
+          {sendername} ({sendermail}) :
+          {/* <span class="text-end">fgjhjk</span> */}
+        </p>
+        <p className="chat msg-content">{text}</p>
       </div>
     ));
   };  // end of displayMessages
 
   return (
-    <div className="container">
-      <h1 className="mt-5 mb-4 text-center text-white border btn-rounded">Chat App</h1>
-      <div className="card mt-5 mb-5">
-        <div className="card-body">
-          <div className="msg-area">{displayMessages()}
+    <div className="chat container">
+      <h1 className="chat mt-5 mb-4 text-center text-white border btn-rounded">Chat App</h1>
+      <div className="chat card mt-5 mb-5">
+        <div className="chat card-body">
+          <div className="chat msg-area">{displayMessages()}
           </div>
         </div>
-        <div className="card-footer">
-          <div className="input-group">
+        <div className="chat card-footer">
+          <div className="chat input-group">
             <input
               type="text"
-              className="form-control"
+              className="chat form-control"
               onChange={(e) => setMsgText(e.target.value)}
               value={msgText}
             />
-            <button onClick={sendMessage} className="btn btn-primary">
+            <button onClick={sendMessage} className="chat btn btn-primary">
               Send
             </button>
           </div>

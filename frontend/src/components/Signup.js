@@ -47,7 +47,7 @@ const Signup = () => {
   const SignupSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, 'Too Short!')
-      .max(10, 'Too Long!')
+      .max(50, 'Too Long!')
       .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
     mobile: Yup.number().min(1000000000,'Required 10-digit mobile no.').max(9999999999,'Required 10-digit mobile no.').required('Required'),
@@ -55,16 +55,16 @@ const Signup = () => {
   });
 
   return (
-    <div className="container">
-      <div className="col-lg-12 mx-auto" style={{marginLeft:"42px"}}>
-      <div className="row">
-        <div className="col-1 b-5"></div>
-        <div className="card col-lg-4 mt-5 mb-5">
-            <img className="x" src={pic} />
+    <div className="signup container">
+      <div className="signup col-lg-12 mx-auto" style={{marginLeft:"42px"}}>
+      <div className="signup row">
+        <div className="signup col-1 b-5"></div>
+        <div className="signup pic card col-lg-4 mt-5 mb-5">
+            <img className="signup x" src={pic} />
         </div>
-        <div className="col-lg-6 mt-5 mb-5">
-        <div className="card xyz">
-      <div className="card-body xyz">
+        <div className="signup col-lg-6 mt-5 mb-5">
+        <div className="signup card xyz">
+      <div className="signup card-body xyz">
       <h1>Signup Here</h1>
       <hr />
 
@@ -129,7 +129,7 @@ const Signup = () => {
                 helperText={errors.password}
                 error={errors.password ? true : false}
             />
-            <button type="submit" className="btn-lg mt-5 btn-primary" >Submit</button>
+            <button type="submit" className="signup btn-lg mt-5 btn-primary" >Submit</button>
           </form>
         )}
       </Formik>

@@ -1,11 +1,11 @@
-.hero-bg{
+.hero-bg.home{
     background-image: url('https://images.unsplash.com/photo-1521651201144-634f700b36ef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=Mnw5NjI0M3wwfDF8c2VhcmNofDJ8fHNhZmFyaXxlbnwwfHx8fDE2NDU2MDY0NTc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080');
                   height: 500px;
                   background-size: cover;
                   background-position: 50% 50%;
 }
 
-.random1{
+.random1.home{
     height: 30px;
                   margin-top: -30px;
                   transform: scale(2);
@@ -13,11 +13,11 @@
                   color: #fff;
 }
 
-.lead {
+.lead.home {
     font-size: 1.25rem;
     font-weight: 300;
 }
-p {
+p.home {
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -25,23 +25,23 @@ p {
     box-sizing: border-box;
 }
 user agent stylesheet
-p {
+p.home {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-.flex-column {
+.flex-column.home {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
 }
-.text-center {
+.text-center.home {
     text-align: center !important;
 }
-body {
+body.home {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
@@ -52,7 +52,7 @@ body {
     text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
     box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
 }
-body {
+body.home {
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 1rem;
@@ -92,7 +92,7 @@ body {
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
-html {
+html.home {
     font-family: sans-serif;
     line-height: 1.15;
     /* -webkit-text-size-adjust: 100%;
@@ -107,34 +107,34 @@ html {
     box-sizing: border-box;
 }
 
-.ht {
+.ht.home {
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.083);
     color: #f8f9fa !important;
 }
 
-div {
+div.home {
     display: block;
     color: whitesmoke !important;
 }
 
-/* main, nav, footer, .container, .row {
+/* main, nav, footer, .container, .row.home {
     max-width: 1200px auto;
     margin: 0 auto;
 } */
 
-main, footer {
+main.home, footer.home {
     padding: 30px 30px 30px 30px;
     margin: 0;
     background-color: rgba(245, 245, 245, 0.579);
     border-radius: 0.52rem;
 }
 /* 
-main, nav, footer, .container, .row {
+main, nav, footer, .container, .row.home {
     width: 98vw;
 } */
 
-footer {
+footer.home {
     margin: 0%;
     padding: 0%;
 }

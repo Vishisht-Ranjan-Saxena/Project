@@ -1,69 +1,74 @@
-.cascading-right {
+.cascading-right.signup {
     margin-right: -50px;
   }
 
   @media (max-width: 991.98px) {
-    .cascading-right {
+    .cascading-right.signup {
       margin-right: 0;
     }
   }
 
-  .card-body {
+  .card-body.signup {
     margin: 26px 66px 26px 36px;
     /* background-color: rgba(158, 165, 201, 0.492) !important; */
     border-radius: 20px;
   }
 
-  .div, .card {
+  .div, .card.signup {
     /* background-color: rgba(177, 171, 233, 0.571) !important; */
     display: flex;
   }
 
-  .card.xyz {
+  .card.xyz.signup {
     margin-left: -10px;
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
   }
 
-  .card-body.xyz {
+  .card-body.xyz.signup {
     margin-left: 50px;
   }
 
-  img {
+  img.signup {
     border-radius: 0.5rem;
   }
 
-  .card-body {
+  .card-body.signup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  div, img {
+  div, img.signup {
     margin: 0;
   }
 
-  img.x {
+  img.x.signup {
     height: 100%;
-    width: auto;
+    width: 101%;
     margin-right: -2px;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 0%;
   }
 
-nav {
+nav.signup {
   width: 98.8vw;
 }
 
-.xyz {
+.xyz.signup {
   background-color: rgba(72, 95, 159, 0.563) !important;
 }
 
-form {
+form.signup {
   color: black;
 }
 
-TextField {
+TextField.signup {
   background-color: black;
 }
+
+div.pic.signup {
+  padding: 0%;
+}
+

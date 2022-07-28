@@ -1,46 +1,50 @@
-.my-h1{
+.my-h1.login{
     font-size: 50px;
     color: blueviolet;
 }
 
-* {
+*.login {
     color: navy;
 }
 
-.card {
+.card.login {
     background: rgba(250, 248, 246, 0.695) !important;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     display: flex;
 }
 
-.card-body {
+.card-body.login {
     background: rgba(250, 248, 246, 0.239) !important;
 }
 
-div.lefty {
+div.lefty.login {
     margin-right: -12px;
     height: 92.4%;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 0%;
 }
 
-div.righty {
+div.righty.login {
     margin-left: -12px;
     /* height: 100%; */
     border-bottom-left-radius: 0%;
     border-top-left-radius: 0%;
 }
 
-/* div.main {
+/* div.main.login {
     margin-bottom: -50px;
 } */
 
-/* div.row, div.col-5 {
+/* div.row, div.col-5.login {
     min-height: 100%;
     /* display: flex; 
 } */
 
-.lefty, .righty {
+.lefty, .righty.login {
     margin-bottom: 10px;
+}
+
+img.intro.login {
+    border-radius: 0.52rem;
 }
