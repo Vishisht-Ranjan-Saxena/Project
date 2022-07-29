@@ -17,7 +17,15 @@ const Chat = () => {
     socket.connect();
   }, []);
 
-  const sendMessage = () => {
+//   const messageList = await fetch('http://localhost:5000/chat/getbyid', {
+//     method: 'POST',
+//     body : JSON.stringify(formdata),
+//     headers : {
+//         'Content-Type' : 'application/json'
+//     }
+// })
+
+  const sendMessage = async () => {
 
     const message = { text: msgText, sent: true, sendername:currentUser.name, sendermail:currentUser.email };
     // emit function is used to send message
@@ -25,6 +33,19 @@ const Chat = () => {
 
     setMessageList([...messageList, message]);
     setMsgText("");
+
+    const response = await fetch('http://localhost:5000/chat/add',{
+      method: 'POST',
+      body : JSON.stringify({
+        chatData: message,
+    createdAt: new Date(),
+    userId: currentUser._id
+      }), //converting javascript object to json
+      headers : {
+        'Content-Type' : 'application/json'
+      }
+    })
+
   };
 
   socket.on("recmsg", (data) => {
