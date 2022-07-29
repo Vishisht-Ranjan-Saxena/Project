@@ -17,13 +17,13 @@ const Chat = () => {
     socket.connect();
   }, []);
 
-//   const messageList = await fetch('http://localhost:5000/chat/getbyid', {
-//     method: 'POST',
-//     body : JSON.stringify(formdata),
-//     headers : {
-//         'Content-Type' : 'application/json'
-//     }
-// })
+  // const messageList = await fetch('http://localhost:5000/chat/getchat', {
+  //   method: 'GET',
+  //   body : JSON.stringify(formdata),
+  //   headers : {
+  //       'Content-Type' : 'application/json'
+  //   }
+  // })
 
   const sendMessage = async () => {
 
