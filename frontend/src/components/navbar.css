@@ -10,6 +10,7 @@
 img.my-logo {
     /* height:"6px"; */
     border: 1px solid rgb(0, 126, 223);
+    border-radius: 0.77rem;
     padding: 11%;
     /* margin: 26%; */
 }

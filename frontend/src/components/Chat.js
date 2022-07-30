@@ -67,26 +67,39 @@ const Chat = () => {
   };  // end of displayMessages
 
   return (
-    <div className="chat container">
-      <h1 className="chat mt-5 mb-4 text-center text-white border btn-rounded">Chat App</h1>
-      <div className="chat card mt-5 mb-5">
-        <div className="chat card-body">
-          <div className="chat msg-area">{displayMessages()}
+    <div className="chat container main pb-5">
+      <div className="chat row mb-5 mt-5">
+       
+       <div className="chat col-md-4 pb-0 col-l">
+          <div className="chat card mb-0 h-100">
+            {/* list */}
           </div>
-        </div>
-        <div className="chat card-footer">
-          <div className="chat input-group">
-            <input
-              type="text"
-              className="chat form-control"
-              onChange={(e) => setMsgText(e.target.value)}
-              value={msgText}
-            />
-            <button onClick={sendMessage} className="chat btn btn-primary">
-              Send
-            </button>
+       </div>
+       <div className="chat col-md-8 col-r">
+          <div className="chat">
+            {/* <h1 className="chat text-center text-white border btn-rounded">Chat App</h1> */}
+            <div className="chat card h-100">
+              <div className="chat card-body">
+                <div className="chat msg-area">{displayMessages()}
+                </div>
+              </div>
+              <div className="chat card-footer">
+                <div className="chat input-group">
+                  <input
+                    type="text"
+                    className="chat form-control"
+                    onChange={(e) => setMsgText(e.target.value)}
+                    value={msgText}
+                  />
+                  <button onClick={sendMessage} className="chat btn btn-primary">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+       </div>
+       
       </div>
     </div>
   );

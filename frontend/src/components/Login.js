@@ -33,7 +33,7 @@ const Login = () => {
             })
             res.json().then(data=>{
                 sessionStorage.setItem("user",JSON.stringify(data));
-                navigate('/login');
+                navigate('/chat');
              });
         }
         else if(res.status === 400){
