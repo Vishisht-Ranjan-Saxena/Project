@@ -29,7 +29,7 @@ router.get('/getall', (req, res) => {
 })
 
 router.get('/getchat', (req, res) => {
-    const message = req.body;
+    // const message = req.body;
     Model.findById(req.params.id)
     .then((result) => {
         res.json(result);

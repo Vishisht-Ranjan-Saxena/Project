@@ -19,7 +19,7 @@ const Chat = () => {
 
   // const messageList = await fetch('http://localhost:5000/chat/getchat', {
   //   method: 'GET',
-  //   body : JSON.stringify(formdata),
+  //   body : JSON.stringify(message),
   //   headers : {
   //       'Content-Type' : 'application/json'
   //   }
