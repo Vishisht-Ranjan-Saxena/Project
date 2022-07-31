@@ -8,8 +8,12 @@ const Chat = () => {
 
   const [msgText, setMsgText] = useState("");
 
-  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem("user")))
+  const [thumbnail, setThumbnail] = useState("");
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("user"))
+    );
 
+    const [conatctEmail, setContactEmail] = useState("");
   const [messageList, setMessageList] = useState([
       ]);
 
