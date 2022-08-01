@@ -1,78 +1,85 @@
-.msg-area{
-    height: 80vh;
-    overflow-y: auto;
+
+.chat-area{
+    height: 70vh;
+    
+    padding: 2rem;
 }
 
-.chat {
-    color: white;
-}
-
-.msg-bubble{
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
+.msg-text{
+    color: rgb(253, 253, 253);
+    font-weight: bold;
+    padding: 1.25rem;
     /* width: fit-content; */
     max-width: 70%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.263);
 }
-
-.bubble-sent{
-    background: green;
+ 
+.msg-sent{
+    background: rgba(0, 253, 219, 0.644);
+    /* background: rgba(139, 225, 0, 0.74); */
     margin-left: auto;
-    border-radius: 20px 5px 20px 20px;
+    border-radius: 1.25rem 0 1.25rem 1.25rem;
 }
 
-.bubble-rec{
-    background: blue;
-    border-radius: 5px 20px 20px 20px;
+.msg-rec{
+    background: rgba(0, 59, 178, 0.74);
+    border-radius: 0 1.25rem 1.25rem 1.25rem;
 
 }
-
-div.main.chat {
-    height: 120%;
+.scroll{
+    overflow-y: auto;
+    height: 84vh;
 }
-
-.msg-content{
-    margin: 0;
+.chat-scroll{
+    overflow-y: auto;
+    height: 80vh;
 }
-
-div.container {
-    margin-bottom: 0px;
+.user{
+    padding: 10px;
+    padding-left: 25px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: rgba(255, 6, 118, 0.589)  ;
+    color: rgb(196, 255, 255);
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
 }
-
-input.chat {
-    border-top-left-radius: 0.52rem;
-    /* border-bottom-right-radius: 0.52rem; */
+.text-view{
+    height: 1px;
 }
-
-/* div.input-group.chat {
-    border-bottom-left-radius: 9.52rem;
-} */
-
-div.col-l.chat {
-    margin-right: 0%;
-    padding-right: 0%;
-    padding-left: 0%;
-    background-color: rgba(54, 106, 250, 0.92);
-    border: 7px solid rgba(54, 106, 250, 0.92);
-    border-width: 12px 7px 12px 14px;
-    border-bottom-left-radius: 0.52rem;
-    border-top-left-radius: 0.52rem;
-    /* padding-bottom: -10000px; */
-    /* margin-bottom: 1px !important; */
+.bg{
+    background :linear-gradient(to right, rgba(36, 36, 36, 0.473),rgba(36, 36, 36, 0.473)), url(https://img.freepik.com/free-vector/neon-quote-box-with-text-space_1017-31493.jpg?t=st=1658783750~exp=1658784350~hmac=908753b8ec40b2bd9bb663f3af7846130ad530c57c83e22bcde889f7fde9c9f7&w=1000);
+    background-attachment: fixed;
+    background-position: center;
+    /* background-repeat: no-repeat; */       
 }
-div.col-r.chat {
-    margin-left: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
-    background-color: rgba(54, 106, 250, 0.92);
-    border: 7px solid rgba(54, 106, 250, 0.92);
-    border-width: 12px 14px 12px 7px;
-    border-bottom-right-radius: 0.52rem;
-    border-top-right-radius: 0.52rem;
+.hidden{
+    display: none;
 }
-
-div.card.chat {
-    /* border: 0rem; */
-    height: 100vh !important;
-    margin-bottom: 0% !important;
+.rd{
+    border-radius: none !important ;
+}
+.name-tag{
+    font-family: 'Acme', sans-serif;
+}
+.text-style{
+    font-family: 'Carter One', cursive;
+}
+.border-style{
+    border-radius: 18%;
+    border : 7px solid black 
+}
+.user:hover{
+    background-color: #a61458;
+}
+.name-tag{
+    color: rgba(255, 234, 0, 0.858);
+    font-weight: 400;
+    font-size: 1.25rem;
+    /* padding-top: 0.50rem; */
+}
+.hi{
+    color: blueviolet;
+    font-size: 1.50rem;
+    font-family: 'Lobster', cursive;
 }
