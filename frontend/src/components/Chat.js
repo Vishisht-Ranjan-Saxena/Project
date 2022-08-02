@@ -184,11 +184,15 @@ const Chat = () => {
   }
 
   return (
-    <div className="h-100 mt-5 pt-2 bg-dark">
+    <div className="h-100 pt-2 bg-whitey">
       <div className="container pt-5">
-        <div className="hidden">
-          <h1>{currentUser._id}</h1>
-          <h1>{currentUser.name}</h1>
+        <div className="hidden mb-5">
+          <div className="row">
+            <div className="col-6 text-primary"><h2>Welcome back, {currentUser.name}!</h2></div>
+            <div className="col-6 text-end text-primary"><h4> <b><u>User ID:</u></b> {currentUser._id}</h4></div>
+          </div>
+          {/* <h1>{currentUser._id}</h1>
+          <h1>{currentUser.name}</h1> */}
         </div>
 
         <div className="row">

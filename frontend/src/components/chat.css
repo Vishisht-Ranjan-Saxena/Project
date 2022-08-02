@@ -39,7 +39,7 @@
     padding-left: 25px;
     margin: 5px;
     border-radius: 20px;
-    background-color: rgba(255, 6, 118, 0.589)  ;
+    background-color: navy  ;
     color: rgb(196, 255, 255);
     font-family: 'Rubik', sans-serif;
     cursor: pointer;
@@ -47,15 +47,19 @@
 .text-view{
     height: 1px;
 }
-.bg{
+
+div.bg-whitey {
+    background-color: rgba(255, 255, 255, 0.488);
+}
+/* .bg{
     background :linear-gradient(to right, rgba(36, 36, 36, 0.473),rgba(36, 36, 36, 0.473)), url(https://img.freepik.com/free-vector/neon-quote-box-with-text-space_1017-31493.jpg?t=st=1658783750~exp=1658784350~hmac=908753b8ec40b2bd9bb663f3af7846130ad530c57c83e22bcde889f7fde9c9f7&w=1000);
     background-attachment: fixed;
     background-position: center;
-    /* background-repeat: no-repeat; */       
+    /* background-repeat: no-repeat; *       
 }
 .hidden{
     display: none;
-}
+} */
 .rd{
     border-radius: none !important ;
 }
