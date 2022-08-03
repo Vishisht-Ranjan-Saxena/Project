@@ -3,6 +3,22 @@ import io from "socket.io-client";
 import Swal from "sweetalert2";
 import "./chat.css";
 
+
+import { EmojiButton } from '@joeattardi/emoji-button';
+
+// const picker = new EmojiButton();
+// const trigger = document.querySelector('.trigger');
+
+// picker.on('emoji', selection => {
+//   trigger.innerHTML = selection.emoji;
+// });
+
+// trigger.addEventListener('click', () => picker.togglePicker(trigger));
+
+
+
+
+
 const Chat = () => {
   const url = "http://localhost:5000";
   const [socket] = useState(io(url, { autoConnect: false }));
@@ -231,17 +247,20 @@ const Chat = () => {
             <div className="  ">
               <div class="input-group mb-3 ">
                 <button
-                  class="btn btn-outline-primary"
+                  class="btn btn-outline-warning bg-white-50"
                   type="submit"
                   for="imp"
                   id="button-addon1"
                   data-mdb-ripple-color="dark"
                 >
-                  <i class="fa-solid fa-paperclip fs-6 p-0"></i>
+                <i class="fas fa-smile fs-6 "></i>
+                  {/* <i class="fa-solid fa-paperclip fs-6 p-0"></i> */}
+
                 </button>
                 <input
                   type="text"
                   className="form-control "
+                  onEnter={sendMessage}
                   aria-describedby="button-addon2"
                   id="imp"
                   onChange={(e) => setText(e.target.value)}

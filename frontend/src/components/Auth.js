@@ -10,7 +10,7 @@ const Authorisor = ({children}) => {
     
       if (currentUser === null) {
         Swal.fire({
-          icon: "info",
+          icon: "warning",
           title: "OOops!!",
           text: "You need to be logged in",
         });
