@@ -10,4 +10,4 @@ const schemaObject =  new Schema({
     password : String,
 })
 
-module.exports = model('users', schemaObject);
+module.exports = model("users", schemaObject)

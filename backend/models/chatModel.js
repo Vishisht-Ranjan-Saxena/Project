@@ -1,4 +1,4 @@
-const {Schema, model, Types} = require('../connection');
+const { Schema, model, Types } = require("../connection");
 
 const schemaObject =  new Schema({
     chatData: Object,
