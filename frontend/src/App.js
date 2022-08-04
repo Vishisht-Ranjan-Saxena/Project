@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Signup from './components/Signup';
 import Chat from './components/Chat';
 import Authorisor from './components/Auth';
+import { UserProvider } from "./useContext";
 import Forgotpassword from './components/Forgotpassword';
 
 function App() {
@@ -33,9 +34,13 @@ function App() {
 
   })
 
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem("user")))
+
+
   return (
     <div className='bgd'>
     <ThemeProvider theme={ darkTheme ? myDarkTheme : myLightTheme }>
+    <UserProvider user={currentUser}>
       <BrowserRouter>
 
       {/* <Link to="/home">Home Page</Link>
@@ -62,6 +67,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+      </UserProvider>
     </ThemeProvider>
     </div>
   );

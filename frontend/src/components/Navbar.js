@@ -1,8 +1,9 @@
 import { styled, Switch } from "@mui/material";
-import React from "react";
-import {NavLink} from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import './navbar.css';
 import pic from '../images/chat-icon-png-18.jpg';
+import { UserContext } from "../useContext";
 
 const Navbar = ({ darkTheme, setDarkTheme }) => {
 
@@ -53,8 +54,22 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
     },
   }));
 
+  const navigate = useNavigate();
+
+  const { loggedIn, setLoggedIn, currentUser } = useContext(UserContext);
+  // const [currentUser, setCurrentUser] = useState(
+  //   JSON.parse(sessionStorage.getItem("user"))
+  // );
+
+
+  const logout = () => {
+    sessionStorage.removeItem("user");
+    setLoggedIn(false);
+    navigate('/login');
+  }
+
   return (
-    <nav class="navbar navbar-expand-lg bg-opacity-25">
+    <nav class="navbar navbar-expand-lg bg-white-50">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -100,7 +115,7 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
           </ul>
         </div>
 
-        <div class="d-flex align-items-center">
+        {/* <div class="d-flex align-items-center">
           <a class="text-reset me-3" href="#">
             <i class="fas fa-shopping-cart"></i>
           </a>
@@ -169,10 +184,61 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
               </li>
             </ul>
           </div>
+        </div> */}
+
+        <div class="d-flex align-items-center">
+
+
+        <div class="dropdown">
+        {loggedIn ? (
+        <div class="d-flex align-items-center text-primary">
+          <span className="me-2">Hi, {currentUser ? currentUser.name : ''}!</span>
+          <div class="dropdown">
+            <Link
+              className="dropdown-toggle d-flex align-items-center hidden-arrow"
+              to="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false">
+              {/* <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+              /> */}
+              <i class="fas fa-address-book fs-4"></i>
+            </Link>
+        
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+            <li>
+                <button className="dropdown-item" >
+                  Settings
+                </button>
+              </li>
+              <li>
+                <button className="dropdown-item" onClick={logout}>
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+          ) : (
+            ""
+          )}
+      </div>
         </div>
       </div>
     </nav>
   )
 }
+      //   </div>
+      //   </div>
+      // </div>
+//     </nav>
+//   )
+// }
 
 export default Navbar

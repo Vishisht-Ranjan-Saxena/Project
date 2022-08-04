@@ -1,13 +1,16 @@
 import { Formik } from 'formik';
-import React from 'react';
+import React, { useContext } from 'react';
 import './login.css';
 import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom';
 import pic from '../images/Friends group.jpg';
 import Swal from "sweetalert2";
+import { UserContext } from '../useContext'
 
 const Login = () => {
 
     const navigate = useNavigate();
+
+    const { setLoggedIn, setCurrentUser } = useContext(UserContext);
 
     const userSubmit = async (formdata) => {
         console.log(formdata);
@@ -33,6 +36,8 @@ const Login = () => {
             })
             res.json().then(data=>{
                 sessionStorage.setItem("user",JSON.stringify(data));
+                setCurrentUser(data);
+                setLoggedIn(true);
                 navigate('/chat');
              });
         }
