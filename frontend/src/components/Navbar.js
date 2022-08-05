@@ -2,6 +2,7 @@ import { styled, Switch } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import './navbar.css';
+import Swal from "sweetalert2";
 import pic from '../images/chat-icon-png-18.jpg';
 import { UserContext } from "../useContext";
 
@@ -66,6 +67,11 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
     sessionStorage.removeItem("user");
     setLoggedIn(false);
     navigate('/login');
+    Swal.fire({
+      icon : 'success',
+      title : 'Logout Successfully',
+      text : 'You are now logged out..'
+  })
   }
 
   return (
