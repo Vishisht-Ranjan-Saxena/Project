@@ -19,9 +19,12 @@ div#root {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 30px;
 } */
 
 /* align-the-input {
     display: block;
-    width: 70%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 } */
