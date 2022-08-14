@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import "./chat.css";
 
 
-import { EmojiButton } from '@joeattardi/emoji-button';
+// import { EmojiButton } from '@joeattardi/emoji-button';
 
 // const picker = new EmojiButton();
 // const trigger = document.querySelector('.trigger');

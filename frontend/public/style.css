@@ -13,3 +13,15 @@ div#root {
     min-width: 100vw;
     max-width: 100vw;
 } */
+
+/* center-the-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+/* align-the-input {
+    display: block;
+    width: 70%;
+} */
